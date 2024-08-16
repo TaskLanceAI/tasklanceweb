@@ -1,0 +1,261 @@
+@import url(https://fonts.googleapis.com/css?family=David+Libre);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
+
+
+html,body {
+    height: 100%; 
+    font-family: 'David Libre', serif;
+    font-weight: 400;
+    font-size: 16px; 
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+h1, h2, h4, h5, h6 {
+	font-family: 'David Libre', serif;
+	font-weight: 300;
+    margin: 0px;
+    padding: 5px;
+}
+
+h3{
+    font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
+    margin: 0px;
+    padding: 5px;
+}
+
+em {
+    font-family: 'Helvetica', sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font-style: normal;
+    
+        
+}
+
+ul {
+    display: block;
+    -webkit-margin-before : 1em;
+     -webkit-margin-after : 1em;
+     -webkit-margin-start : 0em;
+     -webkit-margin-end : 0em;
+     -webkit-padding-start : 1em;
+    
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.package.package-new, .task.task-new {
+   height: 300px;
+    padding: 7px;
+    position: relative;
+  
+}
+
+
+
+.package.package-new > a,.task.task-new > a {
+     text-decoration : none;
+    
+}
+
+
+.package:hover h3,.task:hover h3 {
+    color:coral; 
+}
+
+.package.package-new .gigs-preview li.count a{
+    background-color: rgba(0,0,0,0.6);
+    padding-top: 16px;
+    display: block;
+    position: relative;
+    color: #fff;
+    height: 100%;
+    box-sizing: border-box;
+
+
+    
+}
+
+.package {
+    background-color: #fff;
+    width: 306px;
+    height: 250px;
+    padding: 10px;
+    border: 1px #dddddd solid;
+    margin: 38px 0 38px 0;
+    float: left;
+    overflow: hidden;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.06);
+    
+    box-sizing: border-box;   
+    
+    
+}
+
+
+.package .tags, .task .task-tags {
+    padding: 0 0 5px 0;   
+    /* below 3 lines will make the decription come in 2 line and put  dots after that */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.package.package-new:hover{
+    background-color: #D5D4D2;
+    color: #fff;
+    
+}
+.package.package-new:hover ul.gigs-preview{
+    height: 70px;
+    
+}
+.package.package-new .package-picture {
+   webkit-transition : opacity 0.3s;
+    moz-transition : opacity 0.3s;
+}
+
+.package-picture{
+    background-color: white;
+    display: block;
+    width: 290px;
+    height: 228px;
+    overflow: hidden;
+    
+}
+
+.gigs-preview {
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    right : 5px;
+    height: 0;
+    list-style-type: none;
+    display: inline-flex;
+    padding: 0px;
+    margin: 0px;
+    transition: height 0.3s;
+    z-index: 1;
+}
+
+.gigs-preview li {
+   /* padding-right: 2px; */
+     border: 2px #dddddd solid;
+}
+
+
+
+
+
+.task .detail-content {
+   
+    overflow: hidden;
+     display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
+     
+}
+
+
+
+.task {
+    background-color: #fff;
+    height: 250px;
+    padding: 10px;
+    border: 1px #dddddd solid;
+    margin: 38px 0 38px 20px;
+    
+    overflow: hidden;
+    box-shadow: 0 5px 8px rgba(0,0,0,0.06);
+    box-sizing: border-box;   
+   
+    
+}
+
+.task.task-new:hover .task-picture{
+       
+  -webkit-filter: blur(1.4px);
+  -moz-filter: blur(1.4px);
+  -o-filter: blur(1.4px);
+  -ms-filter: blur(1.4px);
+  filter: blur(1.4px);
+}
+
+.custom {
+    color: red;
+}
+
+.task.task-new:hover .detail-preview{
+    height: 175px;
+}
+.task.task-new:hover .detail-rating{
+    height: 25px;
+}
+
+.detail-preview {
+    position: absolute;
+    bottom: 27px;
+    margin: 0;
+    padding :0;
+     height: 0;
+    left: 5px;   
+    transition: height 0.3s;
+    z-index: 1;
+    width:230.6px;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    overflow: hidden;
+    
+}  
+   
+   .detail-rating{
+    position: absolute;
+    bottom: 2px;
+    margin: 0;
+    padding :0;
+    height: 0;
+    left: 5px;    
+    transition: height 0.3s;
+    z-index: 1;
+    width:230.6px;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    overflow: hidden;
+}
+
+span.task-picture {
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.detail-content,.detail-rating{
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#scroller {
+ width:100%;
+ height:40px;
+ position:fixed;
+ padding-left:50px;
+ opacity:1;
+ bottom:0;
+
+}

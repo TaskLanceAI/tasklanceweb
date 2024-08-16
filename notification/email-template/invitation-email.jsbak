@@ -1,0 +1,18 @@
+
+function invitation_email_template(obj) {
+    return `<p><span style="font-size: 12pt;"><span style="font-size: 12pt;">
+    </span></span><span style="font-size: 12pt;">
+    <strong>Welcome to TaskLance</strong></span>
+            </p>
+            <p>Dear ${obj.taskerName},</p>
+            <p> <a href="http://tasklance.com/">TaskLance</a> is a Top talent marketplace for on demand  vetted IT Professionals and Business Leaders and enable companies to hire Professionals like you.</p>
+            <p>Please upload your profile on http://tasklance.com/taskerlogin/ to get alerts.</p>
+            <p>Or Just click your Email ID <a href="${config.hostUrl}/#/tasker-verification/${obj.taskerId}/"> (${obj.taskerEmail})</a> and we shall to upload your profile.</td>
+            <p>Regards,<br />Team TaskLance</p>`;
+}
+
+module.exports = invitation_email_template;
+
+
+
+

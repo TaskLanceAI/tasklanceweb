@@ -1,0 +1,97 @@
+<div class="container">
+    <section class="inner-top-banner" ng-controller="uibTooltip">
+        <div class="container">
+            <div class="col-lg-12">
+                    <h3>Create your account to hire technical professionals perfect for your team.</h3>
+            </div>
+        </div>
+    </section>
+<!-- 
+    <div class="content-container content-space10 margin-bottom20">
+        <div ng-controller="TabsDemoCtrl">
+        	<div class="col-lg-6 col-md-6 margin-bottom30">
+                <uib-tabset active="profileViewTabs">
+                    <uib-tab index="0" heading="Register with Google/LinkedIn">
+                    	<div class="bg-light-grey margin-top15 margin-bottom15">
+                            <div class="col-xs-6 col-sm-3">
+                                <a ng-click="googleLogin()" class="btn btn-lg btn-block omb_btn-google">
+                                    <i class="fa fa-google-plus visible-xs"></i>
+                                    <span class="hidden-xs">Login with Google+ </span>
+                                </a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="content-container content-space10">
+                        	
+                            <div class="clearfix"></div>
+                        </div>
+                   
+
+                   
+                    	<div class="bg-light-grey margin-top15 margin-bottom15">
+                            <div class="col-xs-6 col-sm-3">
+                                <a ng-click="linkedInLogin()" class="btn btn-lg btn-block omb_btn-linkedin">
+                                    <i class="fa fa-linkedin visible-xs"></i>
+                                    <span class="hidden-xs">Login  with LinkedIn </span>
+                                </a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="content-container content-space10">
+                        	
+                            <div class="clearfix"></div>
+                        </div>
+                    </uib-tab>
+
+                    <uib-tab index="1" heading="Register by Company">
+                        <div class="content-container content-space10 margin-top15">
+                        	
+                        -->                        
+                            <section id="ClientRegistration" class="container" >
+                                <form name="frm" ng-submit="taskerCt.signup()">
+                                    <div class="col-lg-6 col-sm-12">
+                                  
+                                        <div class="form-group">
+                                            <label for="ClientName">Name</label>
+                                            <input type="text" ng-model="taskerCt.obj.name" name="ClientTitle" class="form-control" placeholder="Enter Name" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="tastTitle">Company Name</label>
+                                            <input type="text" ng-model="taskerCt.obj.companyname" name="companyname" class="form-control" placeholder="Enter Company Name" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="taskeremail">Email Address</label>
+                                            <input name="taskDesc" type="email" ng-model="taskerCt.obj.email" class="form-control" placeholder="Enter Email Address" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="taskerpassword">Password</label>
+                                            <input name="taskDesc" type="password" ng-model="taskerCt.obj.password" class="form-control" placeholder="Enter password" required="">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="tastDesc">Mobile</label>
+                                            <input maxlength="10" name="taskDesc" onkeypress='return event.charCode >= 48 && event.charCode <= 57' type="text" ng-model="taskerCt.obj.mobile" class="form-control" placeholder="Enter Mobile No" required="">
+                              
+                                      </div>
+                                        <div class="form-group">
+                                            <label for="taskDesc">City</label>
+                                            <input type="text" ng-model="taskerCt.obj.City" name="taskCity" class="form-control" placeholder="Enter City" required="">
+                                        </div>
+                                       
+                                        <div class="form-group margin-bottom20">
+                                            <div class="col-lg-12 row">
+                                                <input type="submit" value="Sign Up" class="btn btn-info btn-lg margin-right15 margin-bottom15">
+                                            </div>
+                                        </div>
+                                </form>
+                            <div class="clearfix"></div>
+                        </div>
+                    </uib-tab>
+                </uib-tabset>
+        	</div>
+           
+            <div class="clearfix"></div>
+		</div>
+    </div>
+</div>
+
+

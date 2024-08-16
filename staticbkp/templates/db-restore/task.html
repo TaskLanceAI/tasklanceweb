@@ -1,0 +1,57 @@
+    <style>
+        
+    </style>
+    <div class="container">
+        <section data-ng-if="recommendedTaskerCt.getRecommendedTaskers.length != 0">
+            <div class="container">
+                <div class="col-lg-12">
+                    <h1>Choose from our Recommended freelancers for {{::recommendedTaskerCt.subCatName}}</h1>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" data-ng-repeat="tasker in recommendedTaskerCt.getRecommendedTaskers">
+                            <h3>{{tasker.ProfileName}}</h3>
+                            <span class="task-tags">
+                                <em>Last Login: {{tasker.lastlogindate|date:'dd MMMM yyyy'}}</em>
+                            </span>
+                            <div class="responsive-circle nyc-circle">
+                                <div class="circle-inner" set-initials get-initials="{{tasker.ProfileName}}">NYC</div>
+                            </div>
+                            
+                            <div class="detail-preview">
+                                <div class="detail-content">
+                                    {{::tasker.projecttitle}}
+                                </div>
+                    
+                                </div>
+                            <div style="text-align: center;margin-top: 15px;"> <a ng-click="recommendedTaskerCt.sendEmailToTasker(tasker.taskerId)" class="btn btn-info btn-lg margin-right15 margin-bottom15">Assign Task </a></div>
+                        </div>		            	
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-xs-12 col-lg-12" style="margin-top: 30px;" data-ng-if="recommendedTaskerCt.getRecommendedTaskers.length == 0">
+                            <h2>Thank you for using TaskLance</h2>
+                            <h3>There is no TaskLancer for this task available now.</h3>
+                            <h3>We will contact you ASAP.</h3>
+                        </div>	
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="col-lg-12">
+                    <h2> <a ui-sref="taskers" class="btn btn-info btn-lg margin-right15 margin-bottom15"> Show me more Freelancers </a></h2>
+                </div>
+            </div>
+        </section>
+    

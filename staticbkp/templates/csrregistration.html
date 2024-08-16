@@ -1,0 +1,52 @@
+<meta name="description" content="Donate online and get your the tax deduction certificate" />
+<meta name="keywords" content="Corporate social responsibility" />
+<meta property="fb:app_id" content="51230776953" />
+<meta property="og:url" content="https://tasklance.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="tasklance" />
+
+
+<section class="inner-top-banner" ng-controller="uibTooltip">
+    <div class="container">
+        <div class="col-lg-12">
+            <h1>Donor Registration</h1>
+        </div>
+
+        Thank you for choosing to donate through TaskLance. <br>
+        The NGO will contact you to pick up the cheque and give you the tax deduction certificate.
+    </div>
+</section>
+<section id="postTaskFrom" class="container">
+    <form name="frm" ng-submit="donorCt.addDonor()">
+        <div class="col-lg-6 col-sm-12">
+            <div class="form-group">
+                <label for="tastTitle">Name</label>
+                <input type="text" ng-model="donorCt.obj.name" name="taskTitle" class="form-control" placeholder="Enter Name" required="">
+            </div>
+            
+            <div class="form-group">
+                <label for="tastDesc">Email Address</label>
+                <input name="taskDesc" type="email" ng-model="donorCt.obj.email" class="form-control" placeholder="Enter Email Address" required="">
+            </div>
+            <div class="form-group">
+                <label for="tastDesc">Mobile</label>
+                <input maxlength="10" name="taskDesc" onkeypress='return event.charCode >= 48 && event.charCode <= 57' type="text" ng-model="donorCt.obj.mobile" class="form-control" placeholder="Enter Mobile No" required="">
+  
+          </div>
+         
+           
+            <div class="form-group">
+                <label for="taskDesc">Address</label>
+                <input type="textarea" ng-model="donorCt.obj.address" name="taskAddress" class="form-control" placeholder="Enter Address" required="">
+            </div>     
+       
+    <div class="form-group margin-bottom20">
+                <div class="col-lg-12 row">
+                    <input type="submit" value="Submit" class="btn btn-info btn-lg margin-right15 margin-bottom15">
+                </div>
+            </div>
+    </form>
+</section>
+<section id="taskSubmit" style="padding: 50px;" ng-hide="taskerCt.isFormVisible">
+    
+</section>

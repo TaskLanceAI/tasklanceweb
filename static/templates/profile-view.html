@@ -1,0 +1,158 @@
+<div class="container">
+	<div class="content-container content-space10 margin-bottom20">
+        <div class="col-lg-3 col-sm-3">
+        	<div class="profile-view">
+            	<img src="../images/profile-pic.png" class="">
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-6">
+            <h3 class="text-blue margin-top20">{{::taskerProfileCt.taskerDetail[1][0].ProfileName}}</h3>
+            <div class="">
+            	<i class="fa fa-map-marker"></i>
+                <span>{{::taskerProfileCt.taskerDetail[1][0].city_name}}</span>
+            </div>
+            <div class="margin-top10" style="display:none;">
+            	<span class="rating-star-box">
+                    <span class="star star-full"></span>
+                    <span class="star star-full"></span>
+                    <span class="star star-full"></span>
+                    <span class="star star-half"></span>
+                    <span class="star star-empty"></span>
+                </span>
+            </div>
+            <div class="font28 margin-top20" style="display:none;">
+            	<a href="#" class="fa fa-facebook-square text-decoration-none margin-right5"></a>
+                <a href="#" class="fa fa-twitter-square text-decoration-none margin-right5"></a>
+                <a href="#" class="fa fa-google-plus-square text-decoration-none margin-right5"></a>
+                <a href="#" class="fa fa-mobile text-decoration-none margin-right5"></a>
+                <a href="#" class="fa fa-user text-decoration-none margin-right5"></a>
+                <a href="#" class="fa fa-pencil-square-o text-decoration-none margin-right5"></a>
+                <a href="#" class="fa fa-folder-open text-decoration-none margin-right5"></a>
+                <a href="#" class="fa fa-inr text-decoration-none "></a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-sm-3">
+            <a ui-sref="my-task" class="block text-blue text-decoration-none margin-top15 margin-bottom20">
+                <span class="font28">1</span>
+                <span>Tasks Broadcasted</span>
+            </a>
+            <a href="#" class="block text-blue text-decoration-none margin-bottom20">
+                <span class="font28">0</span>
+                <span>Task Completed</span>
+            </a>
+            <a href="#" class="block text-blue text-decoration-none margin-bottom20">
+                <span class="font28">0</span>
+                <span>Reviews</span>
+            </a>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="content-container content-space10 margin-bottom20">
+        <div ng-controller="TabsDemoCtrl">
+            <uib-tabset active="profileViewTabs">
+                <uib-tab index="0" heading="General">
+                	<div class="margin-top15 margin-bottom15">
+                        <div class="col-lg-2 col-sm-2">
+                            <label>First Name</label>                        
+                        </div>
+                        <div class="col-lg-4 col-sm-4 margin-bottom20">
+                            <span>{{::taskerProfileCt.taskerDetail[0][0].ProfileName}}</span>
+                        </div>
+                        <!--<div class="col-lg-2 col-sm-2">
+                            <label>Last Login</label>                        
+                        </div>-->
+                        <!--<div class="col-lg-4 col-sm-4 margin-bottom20">
+                            <span> {{::taskerProfileCt.taskerDetail[0][0].Phone}} Days before</span>
+                        </div>-->
+                        <div class="col-lg-2 col-sm-2">
+                            <label>Address</label>                        
+                        </div>
+                        <div class="col-lg-4 col-sm-4 margin-bottom20">
+                            <span>{{::taskerProfileCt.taskerDetail[1][0].city_name}}</span>
+                        </div>
+                        <div class="clearfix"></div>
+                	</div>
+                    <!--<div class="margin-top15 margin-bottom15">
+                        <div class="col-lg-2 col-sm-2">
+                            <label>Rate</label>                        
+                        </div>
+                        <div class="col-lg-4 col-sm-4 margin-bottom20">
+                            <span>INR {{::taskerProfileCt.taskerDetail[0][0].EmailID}}/hr </span>
+                        </div>
+                        <div class="col-lg-2 col-sm-2">
+                            <label>Address</label>                        
+                        </div>
+                        <div class="col-lg-4 col-sm-4 margin-bottom20">
+                            <span>{{::taskerProfileCt.taskerDetail[1][0].city_name}}</span>
+                        </div>
+                        <div class="clearfix"></div>
+                	</div>-->
+                </uib-tab>
+                <uib-tab index="1" heading="Skills">
+                	<div style="display:none" class="margin-top15 margin-bottom15">
+                        <div class="col-lg-3 col-sm-3">
+                            <label>About Yourself</label>                        
+                        </div>
+                        <div class="col-lg-9 col-sm-9 margin-bottom20">
+                            <span>Tasklance</span>
+                        </div>
+                        <div class="clearfix"></div>
+                	</div>
+                    <div style="display:none" class="margin-top15 margin-bottom15">
+                        <div class="col-lg-3 col-sm-3">
+                            <label>About Yourself</label>                        
+                        </div>
+                        <div class="col-lg-9 col-sm-9 margin-bottom20">
+                            <span>Tasklance</span>
+                        </div>
+                        <div class="clearfix"></div>
+                	</div>
+                    <div class="margin-top15 margin-bottom15">
+                        <div class="col-lg-3 col-sm-3">
+                            <label>Mention Skill</label>                        
+                        </div>
+                        <div class="col-lg-9 col-sm-9 margin-bottom20">
+                            <span>{{::taskerProfileCt.taskerDetail[0][0].SubCategoryName}}</span>
+                        </div>
+                        <div class="clearfix"></div>
+                	</div>
+                    <div class="margin-top15 margin-bottom15">
+                        <div class="col-lg-3 col-sm-3">
+                            <label>Category </label>                        
+                        </div>
+                        <div class="col-lg-9 col-sm-9 margin-bottom20">
+                            <span>{{::taskerProfileCt.taskerDetail[0][0].CategoryName}}</span>
+                        </div>
+                        <div class="clearfix"></div>
+                	</div>
+                    <div class="margin-top15 margin-bottom15">
+                        <div class="col-lg-3 col-sm-3">
+                            <label>Eduction</label>                        
+                        </div>
+                        <div class="col-lg-9 col-sm-9 margin-bottom20">
+                            <span>{{::taskerProfileCt.taskerDetail[1][0].qualification}}</span>
+                        </div>
+                        <div class="clearfix"></div>
+                	</div>
+                </uib-tab>
+                <!--<uib-tab index="2" heading="Reviews">
+                	<div class="margin-top15 margin-bottom15">
+                        <div class="col-lg-3 col-sm-3">
+                            <label>Reviews you have received</label>                        
+                        </div>
+                        <div class="clearfix"></div>
+                	</div>
+                </uib-tab>
+                <uib-tab index="3" heading="Portfolio">
+                	<div class="margin-top15 margin-bottom15">
+                        <div class="col-lg-3 col-sm-3">
+                            <label>Portfolio you have.....</label>                        
+                        </div>
+                        <div class="clearfix"></div>
+                	</div>
+                </uib-tab>-->
+            </uib-tabset>
+		</div>
+    </div>
+</div>
+

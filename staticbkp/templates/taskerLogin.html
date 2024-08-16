@@ -1,0 +1,66 @@
+<section class="inner-top-banner" ng-controller="uibTooltip">
+    <div class="container">
+        <div class="col-lg-12">
+            <h1>Freelancer Registration</h1>
+        </div>
+    </div>
+</section>
+<section id="postTaskFrom" class="container" ng-init="taskCategoryData.getCategories('1,2')" ng-show="taskerCt.isFormVisible">
+    <form name="frm" ng-submit="taskerCt.addTasker()">
+        <div class="col-lg-6 col-sm-12">
+       <h3>Join TaskLance and start earning today.</h3>
+            <div class="form-group">
+                <label for="tastTitle">Name</label>
+                <input type="text" ng-model="taskerCt.obj.name" name="taskTitle" class="form-control" placeholder="Enter Name" required="">
+            </div>
+            <div class="form-group">
+                <label for="taskDesc">Date of Birth</label>
+                <input type="date" id="datepicker" ng-model="taskerCt.obj.DOB" name="taskDOB" class="form-control date" placeholder="Enter Date Of Birth" required="">
+            </div>
+            <div class="form-group">
+                <label for="tastDesc">Email Address</label>
+                <input name="taskDesc" type="email" ng-model="taskerCt.obj.email" class="form-control" placeholder="Enter Email Address" required="">
+            </div>
+            <div class="form-group">
+                <label for="tastDesc">Mobile</label>
+                <input maxlength="10" name="taskDesc" onkeypress='return event.charCode >= 48 && event.charCode <= 57' type="text" ng-model="taskerCt.obj.mobile" class="form-control" placeholder="Enter Mobile No" required="">
+  
+          </div>
+            <div class="form-group">
+                <label for="taskDesc">Qualification</label>
+                <input type="text" ng-model="taskerCt.obj.qualification" name="taskQualification" class="form-control" placeholder="Enter Qualification" required="">
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-6 margin-bottom20">
+                    <label>Task Category</label>
+                    <select ng-model="taskerCt.obj.categoryId" ng-change="taskCategoryData.getSubCategories(taskerCt.obj.categoryId,'1,2')" class="form-control" required="">
+                        <option value="">Select Task Category</option>
+                        <option ng-repeat="cat in taskCategoryData.categories" value="{{cat.TaskCategoryID}}">{{::cat.CategoryName}}</option>
+                    </select>
+                </div>
+                <div class="col-lg-6">
+                    <label>Skills</label>
+                    <select ng-model="taskerCt.obj.subCategoryId" class="form-control" required="">
+                        <option value="">Select Skills </option>
+                        <option value="{{subCat.TaskSubCategoryID}}" ng-repeat="subCat in taskCategoryData.subcategories">{{::subCat.SubCategoryName}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="taskDesc">No. of Years of Experience (if Any)</label>
+                <input type="text" ng-model="taskerCt.obj.experience" name="taskExperience" class="form-control" placeholder="Enter Experience" required="">
+            </div>
+            
+            
+            
+           
+            <div class="form-group margin-bottom20">
+                <div class="col-lg-12 row">
+                    <input type="submit" value="Sign Up" class="btn btn-info btn-lg margin-right15 margin-bottom15">
+                </div>
+            </div>
+    </form>
+</section>
+<section id="taskSubmit" style="padding: 50px;" ng-hide="taskerCt.isFormVisible">
+    <div class="alert" ng-class="taskerCt.taskerStatus == 1? 'alert-success':'alert-error'">{{taskerCt.taskerStatus == 1? 'Thank you '+ taskerCt.obj.name+' for registration.' : 'freelancer already exist with same mobile no.'}}</div>
+</section>

@@ -1,0 +1,32 @@
+<table class="table">
+    <thead>
+        <tr>
+            <td>TaskerID</td>
+             <td>TaskerName</td>
+             <td>ContactNo</td>
+             <td>EmailID</td>
+              <td>Date Of Birth</td>
+              <td>Skills</td>
+              <td>City</td>
+               <td>Education</td>
+            
+            
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr data-ng-repeat="tasklancers in browseTaskLancerCt.tasklancerList">
+            <td>{{::tasklancers.TaskerID}}</td>
+             <td>{{::tasklancers.TaskerName}}</td>
+             <td>{{::tasklancers.ContactNo}}</td>
+             <td>{{::tasklancers.EmailID}}</td>
+              <td>{{::tasklancers.DOB}}</td>
+               <td>{{::tasklancers.Skills}}</td>
+                <td>{{::tasklancers.City}}</td>
+               <td>{{::tasklancers.Education}}</td>
+           
+            
+           
+        </tr>
+    </tbody>
+</table>

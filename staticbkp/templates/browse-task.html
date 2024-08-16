@@ -1,0 +1,31 @@
+<div class="sub-category">
+    <div class="container alpha omega">
+    	<div class="col-lg-12">
+            <ul>
+                <li ng-repeat="category in categories"><a ng-href="#/browse-task/{{::category.TaskCategoryID}}">{{::category.CategoryName}}</a></li>
+            </ul>
+            <div class="clear"></div>
+		</div>
+    </div>
+</div>
+<div class="sub-category-header">
+    <div class="container">
+    	<div class="col-lg-12">
+            <h1 class="inner-header inner-h1">{{categoryDetail.CategoryName}}</h1>
+            <p class="tagline">{{categoryDetail.summary}}</p>
+		</div>
+    </div>
+</div>
+
+<div class="light-grey-bg padding-top20 padding-bottom20">
+    <div class="container">
+    	<div class="col-lg-4 col-md-4 col-sm-6" ng-repeat="browseTask in subCatDetail">
+            <div class="btiteam-container">
+            	<div><img err-src="/images/image-placeholder.jpg" src="{{ ::browseTask.taskSubCatImgUrl }}" title="{{ ::browseTask.SubCategoryName }}" alt="{{ ::browseTask.SubCategoryName }}"></div>
+                <div class="btiteam-title">
+                	<a ng-href="#/browseTaskCategory/{{::browseTask.TaskSubCategoryID}}/">{{ ::browseTask.SubCategoryName }}</a>
+                </div>
+            </div>
+		</div>
+    </div>
+</div>

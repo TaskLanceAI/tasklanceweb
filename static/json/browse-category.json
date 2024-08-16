@@ -1,0 +1,106 @@
+{
+  "browseCategory": {
+	  "browseTaskNames": [
+			{ 
+			  "btTitle": "Database",
+			  "btUrl": "database",
+			  "btTagLine": "The fast and affordable solution for all your tech needs"
+			},
+			{ 
+			  "btTitle": "Software Audit",
+			  "btUrl": "software-audit",
+			  "btTagLine": "Software Audit"
+			},
+			{ 
+			  "btTitle": "Human Resources",
+			  "btUrl": "human-resources",
+			  "btTagLine": "Human Resources"
+			},
+			{ 
+			  "btTitle": "Amazon Web Services(AWS)",
+			  "btUrl": "amazon-web-services(AWS)",
+			  "btTagLine": "Amazon Web Services(AWS)"
+			},
+			{ 
+			  "btTitle": "Qlikview/QlikSense",
+			  "btUrl": "qlikview-qlikSense",
+			  "btTagLine": "Qlikview/QlikSense"
+			}	
+		],
+      "browseTaskItems": [
+			{ 
+			  "btItemId": "101", 
+			  "btItemTitle": "Database Restoration from existing backup",
+			  "btItemUrl": "images/image-placeholder.jpg"
+			},
+			{ 
+			  "btItemId": "102", 
+			  "btItemTitle": "Database Backup",
+			  "btItemUrl": "images/image-placeholder.jpg"
+			},
+			{ 
+			  "btItemId": "103", 
+			  "btItemTitle": "Performance Tuning",
+			  "btItemUrl": "images/image-placeholder.jpg"
+			},
+			{ 
+			  "btItemId": "104", 
+			  "btItemTitle": "Replication",
+			  "btItemUrl": "images/image-placeholder.jpg"
+			},
+			{ 
+			  "btItemId": "105", 
+			  "btItemTitle": "Clustering",
+			  "btItemUrl": "images/image-placeholder.jpg"
+			},
+			{ 
+			  "btItemId": "106", 
+			  "btItemTitle": "Log Shipping",
+			  "btItemUrl": "images/image-placeholder.jpg"
+			},
+			{ 
+			  "btItemId": "107", 
+			  "btItemTitle": "Database migration - MySQl to MS SQL",
+			  "btItemUrl": "images/image-placeholder.jpg"
+			},
+			{ 
+			  "btItemId": "108", 
+			  "btItemTitle": "DeadLocks",
+			  "btItemUrl": "images/image-placeholder.jpg"
+			},
+			{ 
+			  "btItemId": "109", 
+			  "btItemTitle": "Database Repair - Server Off Line for an SQL Database",
+			  "btItemUrl": "images/image-placeholder.jpg"
+			},
+			{ 
+			  "btItemId": "110", 
+			  "btItemTitle": "SQL Server Install/Configuration",
+			  "btItemUrl": "images/image-placeholder.jpg"
+			},
+			{ 
+			  "btItemId": "111", 
+			  "btItemTitle": "My sql server install/configuration",
+			  "btItemUrl": "images/image-placeholder.jpg"
+			}
+        ],
+		"browseTaskGallery": [
+			{ 
+				"btgImg": "images/slide-01.jpg",
+				"btgImgTitle": "Excellent will use again",
+				"btgImgDesc": "Reviewed by fenwat about 10 hours ago"
+			},
+			{ 
+				"btgImg": "images/slide-02.jpg",
+				"btgImgTitle": "Needed a logo for my homemade candle company",
+				"btgImgDesc": "Reviewed by skhattakr about 11 hours ago"
+			},
+			{ 
+				"btgImg": "images/slide-03.jpg",
+				"btgImgTitle": "Thank you :)",
+				"btgImgDesc": "Reviewed by sarasaedinia about 10 hours ago"
+			}	
+		]
+	 	
+	}
+}

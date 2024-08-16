@@ -1,0 +1,26 @@
+<table class="table">
+    <thead>
+        <tr>
+            <td>TaskerID</td>
+            <td>TaskCategory</td>
+            <td>SubCategory</td>
+            <td>Education</td>
+            <td>Date_of_Birth</td>
+            <td>Assign Task</td>
+            
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr data-ng-repeat="tasker in browseTaskerCt.getTaskersList">
+            <td>{{::tasker.TaskerID}}</td>
+            <td>{{::tasker.TaskCategory}}</td>
+            <td>{{::tasker.SubCategory}}</td>
+            <td>{{::tasker.Education}}</td>
+            <td>{{::tasker.date_of_birth}}</td>
+            <td><h2 <a ui-sref="taskers" class="btn btn-info btn-lg margin-right15 margin-bottom15">Assign Task </a></h2></td>
+            
+           
+        </tr>
+    </tbody>
+</table>

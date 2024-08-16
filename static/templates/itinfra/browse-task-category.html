@@ -1,0 +1,301 @@
+<div class="sub-category">
+    <div class="container alpha omega">
+      <div class="col-lg-12">
+            <ul>
+                <li ng-repeat="category in categories"><a ng-href="/browse-task/{{::category.TaskCategoryID}}">{{::category.CategoryName}}</a></li>
+            </ul>
+            <div class="clear"></div>
+    </div>
+    </div>
+</div>
+
+<div class="light-grey-bg padding-bottom20">
+  <div class="floating-nav">
+        <div class="container">
+            <div class="col-lg-12">
+                <div class="sub-category-floating">
+                    <ul>
+                        <li><a ng-click="scrollTo('overview')" data-id="overview" class="active">Overview</a></li>
+                        <li><a ng-click="scrollTo('compare-packages')" data-id="compare-packages">Compare Packages</a></li>
+                        <li><a ng-click="scrollTo('description')" data-id="description">Description</a></li>
+                        <li><a ng-click="scrollTo('faqs')" data-id="faqs">FAQs</a></li>
+                        <li><a ng-click="scrollTo('reviews')" data-id="reviews">Reviews</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">     
+        <div class="col-lg-8 section-ids"><!-- Left side code start here -->
+          <div id="overview" class="hidden-section"></div>
+          <div class="content-container margin-bottom20">
+              <div class="content-space10">
+                  <div class="border-bottom padding-bottom15 margin-bottom15">
+                        <h1 class="text-blue font-light">Server Monitoring</h1>
+                        <div class="leftfloat">
+                            <span class="rating-star-box">
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-half"></span>
+                                <span class="star star-empty"></span>
+                            </span>
+                            <span class="text-grey">( 2891 )</span>
+                        </div>
+                        <div class="rightfloat"><a href="http://tasklance.com/" target="_blank"> <i class="glyphicon glyphicon-ok"></i> 10 Task done</a></div>
+                        <div class="clearfix"></div>
+                  </div>
+                </div>
+                <div ng-controller="carouselCtrl" id="slides_control">
+                    <div class="carousel">
+                        <carousel interval="myInterval">
+                            <slide ng-repeat="slide in slides" active="slide.active">
+                                <img ng-src="{{slide.btgImg}}" title="{{slide.btgImgTitle}}" alt="{{slide.btgImgTitle}}">
+                                <div class="carousel-caption">
+                                    <h4>{{slide.btgImgTitle}}</h4>
+                                    <p>{{slide.btgImgDesc}}</p>
+                                </div>
+                            </slide>
+                        </carousel>
+                    </div>
+              </div>
+            </div>
+            <div id="compare-packages" class="hidden-section"></div>
+            <div class="content-container margin-bottom20">
+              <div class="content-space10">
+                  <div class="border-bottom">
+                        <h2 class="text-blue font-light">Compare Packages</h2>
+                        <div class="clearfix"></div>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="packages-wrapper">
+                        <tr>
+                          <th rowspan="2">&nbsp;</th>
+                          <th> $ 5 </th>
+                          <th> $ 25 </th>
+                          <th> $ 60 </th>
+                        </tr>
+                        <tr>
+                          <th>Basic</th>
+                          <th>Standard</th>
+                          <th>Premium</th>
+                        </tr>
+                        <tr>
+                          <td>Description</td>
+                          <td>Basic Package</td>
+                          <td>Standard Package</td>
+                          <td>Premium Package</td>
+                        </tr>
+                        <tr>
+                          <td>&nbsp;</td>
+                          <td>Check your site to ensure that there are no outages,malware or viruses.</td>
+			  <td>Continious Security, backups monitoring  </td>
+			  <td>Continious Security, backup monitoring &  optimisation  </td>
+                        </tr>
+                        <tr>
+                          <td>Backup</td>
+                          <td><span><i class="glyphicon glyphicon-ok"></i></span></td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                        </tr>
+                        <tr>
+                          <td>Vulnerability Testing</td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                        </tr>
+                        <tr>
+                          <td>Security Patch Installation</td>
+                          <td>–</td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                        </tr>
+                        <tr>
+                          <td>Software Version Upgrade</td>
+                          <td>–</td>
+                          <td>–</td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                        </tr>
+                          <td>Monitoring Hours</td>
+                          <td>
+                            <label>
+                              <input type="radio" value="0" name="basic-time" checked>
+                              <span>4 Hour</span> 
+                            </label>
+                            <br>
+                            <label>
+                              <input type="radio" value="1" name="basic-time">                              
+                              <span>1 Hour</span> 
+                              <span>(+$10)</span> 
+                            </label>
+                          </td>
+                          <td>
+                            <label>
+                              <input type="radio" value="0" name="standard-time" checked>
+                              <span>8 Hour</span>
+                              <span>(+$10)</span> 
+ 
+                            </label>
+                            <br>
+                            <label>
+                              <input type="radio" value="1" name="standard-time">                              
+                              <span>8 Hour</span> 
+                              <span>(+$10)</span> 
+                            </label>
+                          </td>
+                          <td>1 day</td>
+                        </tr>
+                        <tr>
+                          <td>&nbsp;</td>
+                          <td><a href="#" class="btn btn-blue btn-blue-2x">$ 5</span></a></td>
+                          <td><a href="#" class="btn btn-blue btn-blue-2x">$ 25</span></a></td>
+                          <td><a href="#" class="btn btn-blue btn-blue-2x">$ 60</span></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="description" class="hidden-section"></div>
+            <div class="content-container margin-bottom20">
+              <div class="content-space10">
+                  <div class="border-bottom margin-bottom15">
+                        <h2 class="text-blue font-light">About this task</h2>
+                        <div class="clearfix"></div>
+                  </div>
+                    <p>This service will continuously monitor your site 24/7 for security threats, update your plugins and website downtime. 
+
+This service includes:
+
+Secure your site from being hacked (One off fee for this)
+Regular Site Backups
+Database optimisation
+Regular site security and malware checks
+Removal of spam comments
+Core WordPress platform and plugins update support.
+Monthly report of tasks performed
+
+
+Leaving you to concentrate on what you do best, which is to provide an excellent service to your clients. </p>
+                <div class="text-center">
+                    <div class="col-lg-4 col-sm-4 margin-bottom15">
+                        <p>Seller Communication</p>
+                        <span class="rating-star-box">
+                            <span class="star star-full"></span>
+                            <span class="star star-full"></span>
+                            <span class="star star-full"></span>
+                            <span class="star star-half"></span>
+                            <span class="star star-empty"></span>
+                        </span>
+                    </div>
+                    <div class="col-lg-4 col-sm-4 margin-bottom15">
+                        <p>Seller Communication</p>
+                        <span class="rating-star-box">
+                            <span class="star star-full"></span>
+                            <span class="star star-full"></span>
+                            <span class="star star-full"></span>
+                            <span class="star star-half"></span>
+                            <span class="star star-empty"></span>
+                        </span>
+                    </div>
+                    <div class="col-lg-4 col-sm-4 margin-bottom15">
+                        <p>Seller Communication</p>
+                        <span class="rating-star-box">
+                            <span class="star star-full"></span>
+                            <span class="star star-full"></span>
+                            <span class="star star-full"></span>
+                            <span class="star star-half"></span>
+                            <span class="star star-empty"></span>
+                        </span>
+                    </div>
+                  <div class="clearfix"></div>
+              </div>
+                <div class="review-container margin-bottom15">
+                    <div class="border-top padding-top15 margin-top15">
+                        <div class="col-lg-2 text-center">
+                            <img src="../images/reviewer-pic.jpg" class="img-circle width-img-70">
+                        </div>
+                        <div class="col-lg-10">
+                          <a href="#" class="font-regular font16">Koffeebrothers</a>
+                            <span class="rating-star-box">
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-half"></span>
+                                <span class="star star-empty"></span>
+                            </span>
+                            <p class="margin-top5">Outstanding Experience!</p>
+                            <span class="text-grey-light">Today</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="border-top padding-top15 margin-top15">
+                        <div class="col-lg-2 text-center">
+                            <img src="../images/reviewer-pic.jpg" class="img-circle width-img-70">
+                        </div>
+                        <div class="col-lg-10">
+                          <a href="#" class="font-regular font16">Koffeebrothers</a>
+                            <span class="rating-star-box">
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-half"></span>
+                                <span class="star star-empty"></span>
+                            </span>
+                            <p class="margin-top5">Outstanding Experience!</p>
+                            <span class="text-grey-light">Today</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="border-top padding-top15 margin-top15">
+                        <div class="col-lg-2 text-center">
+                            <img src="../images/reviewer-pic.jpg" class="img-circle width-img-70">
+                        </div>
+                        <div class="col-lg-10">
+                          <a href="#" class="font-regular font16">Koffeebrothers</a>
+                            <span class="rating-star-box">
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-half"></span>
+                                <span class="star star-empty"></span>
+                            </span>
+                            <p class="margin-top5">Outstanding Experience!</p>
+                            <span class="text-grey-light">Today</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>                    
+                </div>
+            </div>
+        </div><!-- Left side code end here -->
+        <div class="col-lg-4"><!-- Right side code start here -->
+          <div class="content-container content-space10">
+              <h2>
+                  <span class="text-blue">
+                      <i class="glyphicon glyphicon-usd font18"></i>5
+                    </span>
+                    Basic
+                </h2>
+                <div class="margin-bottom15">
+                  <i class="glyphicon glyphicon-time"></i> Basic Monitoring
+                    <p>Basic Monitoring : 4 Hours – 8 Hours</p>
+                </div>
+                <div>
+                  <h5>Skills:</h5>
+                    <ul>
+                      <li>Database Administration</li>
+                        <li>Database Programming</li>
+                        <li>MySQL</li>
+                        <li>System Admin</li>
+                    </ul>
+                </div>
+                <div class="text-center margin-top15">
+                  <a ui-sref="post-task" class="btn btn-blue btn-blue-3x">Post a Task</a>
+                </div>
+                <div class="text-center margin-bottom15 margin-top15">
+                  <a href="#">Compare Packages</a>
+                </div>
+            </div>
+        </div><!-- Right side code end here -->
+    </div>
+</div>

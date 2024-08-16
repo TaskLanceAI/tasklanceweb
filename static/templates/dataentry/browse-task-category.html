@@ -1,0 +1,378 @@
+<div class="sub-category">
+    <div class="container alpha omega">
+      <div class="col-lg-12">
+            <ul>
+                <li ng-repeat="category in categories"><a ng-href="/browse-task/{{::category.TaskCategoryID}}">{{::category.CategoryName}}</a></li>
+            </ul>
+            <div class="clear"></div>
+    </div>
+    </div>
+</div>
+
+<div class="light-grey-bg padding-bottom20">
+  <div class="floating-nav">
+        <div class="container">
+            <div class="col-lg-12">
+                <div class="sub-category-floating">
+                    <ul>
+                        <li><a ng-click="scrollTo('overview')" data-id="overview" class="active">Overview</a></li>
+                        <li><a ng-click="scrollTo('compare-packages')" data-id="compare-packages">Compare Packages</a></li>
+                        <li><a ng-click="scrollTo('description')" data-id="description">Description</a></li>
+                        <li><a ng-click="scrollTo('faqs')" data-id="faqs">FAQs</a></li>
+                        <li><a ng-click="scrollTo('reviews')" data-id="reviews">Reviews</a></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">     
+        <div class="col-lg-8 section-ids"><!-- Left side code start here -->
+          <div id="overview" class="hidden-section"></div>
+          <div class="content-container margin-bottom20">
+              <div class="content-space10">
+                  <div class="border-bottom padding-bottom15 margin-bottom15">
+                        <h1 class="text-blue font-light">MS SQL server restore database from backup file</h1>
+                        <div class="leftfloat">
+                            <span class="rating-star-box">
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-half"></span>
+                                <span class="star star-empty"></span>
+                            </span>
+                            <span class="text-grey">( 2891 )</span>
+                        </div>
+                        <div class="rightfloat"><a href="http://tasklance.com/" target="_blank"> <i class="glyphicon glyphicon-ok"></i> 10 Task done</a></div>
+                        <div class="clearfix"></div>
+                  </div>
+                </div>
+                <div ng-controller="carouselCtrl" id="slides_control">
+                    <div class="carousel">
+                        <carousel interval="myInterval">
+                            <slide ng-repeat="slide in slides" active="slide.active">
+                                <img ng-src="{{slide.btgImg}}" title="{{slide.btgImgTitle}}" alt="{{slide.btgImgTitle}}">
+                                <div class="carousel-caption">
+                                    <h4>{{slide.btgImgTitle}}</h4>
+                                    <p>{{slide.btgImgDesc}}</p>
+                                </div>
+                            </slide>
+                        </carousel>
+                    </div>
+              </div>
+            </div>
+            <div id="compare-packages" class="hidden-section"></div>
+            <div class="content-container margin-bottom20">
+              <div class="content-space10">
+                  <div class="border-bottom">
+                        <h2 class="text-blue font-light">Compare Packages</h2>
+                        <div class="clearfix"></div>
+                  </div>
+                </div>
+                <div class="table-responsive">
+                  <table class="packages-wrapper">
+                        <tr>
+                          <th rowspan="2">&nbsp;</th>
+                          <th> $ 5 </th>
+                          <th> $ 25 </th>
+                          <th> $ 60 </th>
+                        </tr>
+                        <tr>
+                          <th>Basic</th>
+                          <th>Standard</th>
+                          <th>Premium</th>
+                        </tr>
+                        <tr>
+                          <td>Description</td>
+                          <td>NEWBIE</td>
+                          <td>BEST SELLER</td>
+                          <td>SUPER</td>
+                        </tr>
+                        <tr>
+                          <td>&nbsp;</td>
+                          <td>2 Logo Concepts, FREE vector in cdr-ai-eps, FREE png-jpg, 2 Revisions - NO Mascot or complex design.</td>
+                          <td>4 Logo Concepts+FREE ANY file vector and psd+4 Revisions+Faster Delivery+hi res+transparent</td>
+                          <td>BEST 6 Logo concepts+File Sources+Biz Card+Stationery+Web banner,FB,Twitter DP and banner+superFAST</td>
+                        </tr>
+                        <tr>
+                          <td>Vector File</td>
+                          <td><span><i class="glyphicon glyphicon-ok"></i></span></td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                        </tr>
+                        <tr>
+                          <td>High Resolution</td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                        </tr>
+                        <tr>
+                          <td>Logo Transparency</td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                        </tr>
+                        <tr>
+                          <td>Source File</td>
+                          <td>–</td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                        </tr>
+                        <tr>
+                          <td>Social Media Kit</td>
+                          <td>–</td>
+                          <td>–</td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                        </tr>
+                        <tr>
+                          <td>Stationery Designs</td>
+                          <td>–</td>
+                          <td>–</td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                        </tr>
+                        <tr>
+                          <td>3D Mockup</td>
+                          <td>–</td>
+                          <td>–</td>
+                          <td><i class="glyphicon glyphicon-ok"></i></td>
+                        </tr>
+                        <tr>
+                          <td>Additional Revision</td>
+                          <td>–</td>
+                          <td>–</td>
+                          <td>–</td>
+                        </tr>
+                        <tr>
+                          <td>Additional Logo</td>
+                          <td>–</td>
+                          <td>–</td>
+                          <td>–</td>
+                        </tr>
+                        <tr>
+                          <td># of Logos Included</td>
+                          <td> 2 </td>
+                          <td> 4 </td>
+                          <td> 5 </td>
+                        </tr>
+                        <tr>
+                          <td>Revisions</td>
+                          <td> 2 </td>
+                          <td> 4 </td>
+                          <td> unlimited </td>
+                        </tr>
+                        <tr>
+                          <td>Delivery Time</td>
+                          <td>
+                            <label>
+                              <input type="radio" value="0" name="basic-time" checked>
+                              <span>3 days</span> 
+                            </label>
+                            <br>
+                            <label>
+                              <input type="radio" value="1" name="basic-time">                              
+                              <span>1 day</span> 
+                              <span>(+$10)</span> 
+                            </label>
+                          </td>
+                          <td>
+                            <label>
+                              <input type="radio" value="0" name="standard-time" checked>
+                              <span>2 days</span> 
+                            </label>
+                            <br>
+                            <label>
+                              <input type="radio" value="1" name="standard-time">                              
+                              <span>1 day</span> 
+                              <span>(+$10)</span> 
+                            </label>
+                          </td>
+                          <td>1 day</td>
+                        </tr>
+                        <tr>
+                          <td>&nbsp;</td>
+                          <td><a href="#" class="btn btn-blue btn-blue-2x">$ 5</span></a></td>
+                          <td><a href="#" class="btn btn-blue btn-blue-2x">$ 25</span></a></td>
+                          <td><a href="#" class="btn btn-blue btn-blue-2x">$ 60</span></a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="description" class="hidden-section"></div>
+            <div class="content-container margin-bottom20">
+              <div class="content-space10">
+                  <div class="border-bottom margin-bottom15">
+                        <h2 class="text-blue font-light">About this task</h2>
+                        <div class="clearfix"></div>
+                  </div>
+                    <p>Restoring is the process of copying data from a backup and applying logged transactions to the data. Restore is what you do with backups. Take the backup file and turn it back into a database.</p>
+                    <h4>Database restoration from following backups</h4>
+                    <ul>
+                      <li>Full database backup</li>
+                        <li>Full database and transaction log backups</li>
+                        <li>Full database and differential backups</li>
+                    </ul>
+                    <h4 class="margin-top25">Why us?</h4>
+                    <ul>
+                      <li>Only screened and online freelancers</li>
+                        <li>100% success rate</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="faqs" class="hidden-section"></div>
+            <div class="content-container margin-bottom20" ng-controller="accordionCtrl">
+              <div class="content-space10">
+                  <div class="border-bottom">
+                        <h2 class="text-blue font-light">FAQs</h2>
+                        <div class="clearfix"></div>
+                  </div>
+                </div>
+                <div class="content-space10 cus-accordion">
+                    <accordion close-others="oneAtATime">
+                        <div accordion-group class="panel-default" ng-repeat="group in groups" is-open="status.open">
+                            <accordion-heading>
+                                {{group.title}} <i class="pull-right glyphicon font12 text-grey" ng-class="{'glyphicon-chevron-up': status.open, 'glyphicon-chevron-down': !status.open}"></i>
+                            </accordion-heading>
+                                {{group.content}}
+                        </div>
+                    </accordion>
+              </div>
+            </div>
+            <div id="reviews" class="hidden-section"></div>
+            <div class="content-container margin-bottom20">
+              <div class="content-space10">
+                  <div class="border-bottom margin-bottom15">
+                        <h2 class="text-blue font-light">29228 Reviews
+                          <span class="rating-star-box">
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-half"></span>
+                                <span class="star star-empty"></span>
+                            </span>
+                            <span>4.8</span>
+                        </h2>
+                        <div class="clearfix"></div>
+                  </div>
+                </div>
+                <div class="text-center">
+                    <div class="col-lg-4 col-sm-4 margin-bottom15">
+                        <p>Seller Communication</p>
+                        <span class="rating-star-box">
+                            <span class="star star-full"></span>
+                            <span class="star star-full"></span>
+                            <span class="star star-full"></span>
+                            <span class="star star-half"></span>
+                            <span class="star star-empty"></span>
+                        </span>
+                    </div>
+                    <div class="col-lg-4 col-sm-4 margin-bottom15">
+                        <p>Seller Communication</p>
+                        <span class="rating-star-box">
+                            <span class="star star-full"></span>
+                            <span class="star star-full"></span>
+                            <span class="star star-full"></span>
+                            <span class="star star-half"></span>
+                            <span class="star star-empty"></span>
+                        </span>
+                    </div>
+                    <div class="col-lg-4 col-sm-4 margin-bottom15">
+                        <p>Seller Communication</p>
+                        <span class="rating-star-box">
+                            <span class="star star-full"></span>
+                            <span class="star star-full"></span>
+                            <span class="star star-full"></span>
+                            <span class="star star-half"></span>
+                            <span class="star star-empty"></span>
+                        </span>
+                    </div>
+                  <div class="clearfix"></div>
+              </div>
+                <div class="review-container margin-bottom15">
+                    <div class="border-top padding-top15 margin-top15">
+                        <div class="col-lg-2 text-center">
+                            <img src="../images/reviewer-pic.jpg" class="img-circle width-img-70">
+                        </div>
+                        <div class="col-lg-10">
+                          <a href="#" class="font-regular font16">Koffeebrothers</a>
+                            <span class="rating-star-box">
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-half"></span>
+                                <span class="star star-empty"></span>
+                            </span>
+                            <p class="margin-top5">Outstanding Experience!</p>
+                            <span class="text-grey-light">Today</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="border-top padding-top15 margin-top15">
+                        <div class="col-lg-2 text-center">
+                            <img src="../images/reviewer-pic.jpg" class="img-circle width-img-70">
+                        </div>
+                        <div class="col-lg-10">
+                          <a href="#" class="font-regular font16">Koffeebrothers</a>
+                            <span class="rating-star-box">
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-half"></span>
+                                <span class="star star-empty"></span>
+                            </span>
+                            <p class="margin-top5">Outstanding Experience!</p>
+                            <span class="text-grey-light">Today</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="border-top padding-top15 margin-top15">
+                        <div class="col-lg-2 text-center">
+                            <img src="../images/reviewer-pic.jpg" class="img-circle width-img-70">
+                        </div>
+                        <div class="col-lg-10">
+                          <a href="#" class="font-regular font16">Koffeebrothers</a>
+                            <span class="rating-star-box">
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-half"></span>
+                                <span class="star star-empty"></span>
+                            </span>
+                            <p class="margin-top5">Outstanding Experience!</p>
+                            <span class="text-grey-light">Today</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>                    
+                </div>
+            </div>
+        </div><!-- Left side code end here -->
+        <div class="col-lg-4"><!-- Right side code start here -->
+          <div class="content-container content-space10">
+              <h2>
+                  <span class="text-blue">
+                      <i class="glyphicon glyphicon-usd font18"></i>5
+                    </span>
+                    Basic
+                </h2>
+                <div class="margin-bottom15">
+                  <i class="glyphicon glyphicon-time"></i> Approx 1 Hour task
+                    <p>Database Backup size : 10MB – 4 GB</p>
+                </div>
+                <div>
+                  <h5>Skills:</h5>
+                    <ul>
+                      <li>Database Administration</li>
+                        <li>Database Programming</li>
+                        <li>MySQL</li>
+                        <li>System Admin</li>
+                    </ul>
+                </div>
+                <div class="text-center margin-top15">
+                  <a ui-sref="post-task" class="btn btn-blue btn-blue-3x">Post a Task</a>
+                </div>
+                <div class="text-center margin-bottom15 margin-top15">
+                  <a href="#">Compare Packages</a>
+                </div>
+            </div>
+        </div><!-- Right side code end here -->
+    </div>
+</div>

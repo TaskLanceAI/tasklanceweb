@@ -1,0 +1,150 @@
+<style>
+    .selected-box{border: 2px solid #6699ff!important;}
+    .rate-box{border: 1px solid #555;padding: 10px;float: left;margin: 10px;cursor: pointer;text-align: center}
+    label{font-weight: 300;}
+</style>
+<section class="inner-top-banner" ng-controller="uibTooltip">
+    <div class="container">
+        <div class="col-lg-12">
+            <h1>Post a Task</h1>
+        </div>
+    </div>
+</section>
+<section id="postTaskFrom" class="container" ng-init="taskCategoryData.getCategories('1')">
+    <form name="frm" ng-submit="posttaskCt.addTask()">
+        <h2>Post a Task for Free - Start receiving proposals within minutes</h2>
+        <div class="col-lg-6 col-sm-12">
+            <div class="form-group">
+                <label for="tastTitle">Task Title</label>
+                <input type="text" ng-model="posttaskCt.obj.taskTitle" name="taskTitle" class="form-control" id="taskTitle" placeholder="e.g. I need a professional website design " required="">
+            </div>
+            <div class="form-group">
+                <label for="tastDesc">Describe the Task</label>
+                <textarea name="taskDesc" ng-model="posttaskCt.obj.taskDesc" class="form-control" id="taskDesc" placeholder="Describe the Task in detailed description to help you get better proposals " required=""></textarea>
+            </div>
+
+            <div class="form-group margin-bottom20">
+                <div class="col-lg-12 row">
+                    <label>Upload document</label>
+                    <div>
+                        <input class="form-control" type="file" class="image-upload-button" id="file" name="file" multiple data-ng-blur="posttaskCt.getFiles($event)" />
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="form-group margin-bottom20">
+                <div class="col-lg-12 row">
+                    <label>What type of talent are you interested in?
+                        
+                    </label>
+                </div>
+            </div>
+            <br>
+            <div class="form-group row">
+                <div class="col-lg-6 margin-bottom20">
+                    <label>Category</label>
+                    <select ng-model="posttaskCt.obj.categoryId" ng-change="posttaskCt.getSubCategories(posttaskCt.obj.categoryId,'1')" class="form-control" required="">
+                        <option value="">Select Task Category</option>
+                        <option ng-repeat="cat in posttaskCt.categories" value="{{::cat.TaskCategoryID}}">{{::cat.CategoryName}}</option>
+                    </select>
+                </div>
+                <div class="col-lg-6">
+                    <label>Sub Category</label>
+                    <select ng-model="posttaskCt.obj.subCategoryId" data-ng-change="posttaskCt.selectAdUrl()" class="form-control" required="">
+                        <option value="">Select subcategories </option>
+                        <option value="{{::subCat.TaskSubCategoryID}}" ng-repeat="subCat in posttaskCt.subcategories">{{::subCat.SubCategoryName}}</option>
+                    </select>
+                </div>
+            </div>
+
+            
+
+            <!--
+            <div class="form-group row">
+                <label class="col-lg-12">Skills</label>
+                <div class="clearfix"></div>
+                <div class="col-lg-9 col-sm-9 margin-bottom20">
+                    <input uib-typeahead="skill.SkillName for skill in skillList  | filter:$viewValue | limitTo:10" typeahead-on-select="addSkill()" type="text" class="form-control" placeholder="Please enter required skill" ng-model="newSkill">
+                </div>
+                <div class="col-lg-3 col-sm-3 margin-bottom20">
+                    <button ng-click="addSkill()" class="btn btn-info" ng-disabled="newSkill.length == 0">Add Skill</button>
+                </div>
+                <div class="col-lg-12">
+                    <span ng-repeat="skill in skills" class="btn btn-success alert-sm margin-right15" uib-alert close="removeSkill($index)">
+                        {{ skill.title }}
+                    </span>
+                </div>
+            </div>
+            // -->
+            
+            <!--<div class="form-group margin-bottom20">
+                <div class="col-lg-12 row">
+                    <label>Once you post your task, when would you like your service delivered?
+                        <i class="glyphicon glyphicon-info-sign" tooltip-placement="auto" uib-tooltip=" e.g. 1 Hour, 4 Hours,1 day(8 Hours), 
+                        3 Days"></i>
+                    </label>
+                    <input ng-model="posttaskCt.obj.eta" type="text" placeholder="Please enter Hours/Days/Weeks" class="form-control" required>
+                </div>
+                <div class="clearfix"></div>
+            </div>-->
+           
+
+           <div class="form-group margin-bottom20" data-ng-if="posttaskCt.obj.subCategoryId != '' && posttaskCt.obj.subCategoryId > 0">
+                <div class="col-lg-12 row">
+                    <label> Task Rate Card(INR):
+                        <!-- What is your budget for this task? -->
+                       <!-- <i class="glyphicon glyphicon-info-sign" tooltip-placement="auto" uib-tooltip="300 INR minimum"></i> -->
+                    </label>
+                    <!-- <input ng-model="obj.budget" type="text" placeholder="300 INR minimum  " class="form-control" required>  -->
+                    <div>
+                        <!-- 
+                        <fieldset class="form-group radio-inline">
+                            <label for="radio1">
+                                <input required ng-model="posttaskCt.obj.budget" value="{{posttaskCt.budget.taskrate}}" name="group1" type="radio" id="radio1">
+                                <label style="margin-bottom: 5px;">Hourly Rate ({{posttaskCt.budget.taskrate}})</label>
+                            </label>
+                        </fieldset>
+                        -->
+                        <fieldset class="form-group radio-inline">
+                            <label for="radio1">
+                                <input required ng-model="posttaskCt.obj.budget" value="{{posttaskCt.budget.Dailyrate}}" name="group1" type="radio" id="radio1">
+                                <label style="margin-bottom: 5px;">Daily Rate ({{posttaskCt.budget.Dailyrate}})</label>
+                            </label>
+                        </fieldset>
+                        <fieldset class="form-group radio-inline">
+                            <label for="radio1">
+                                <input required ng-model="posttaskCt.obj.budget" value="{{posttaskCt.budget.Weeklyrate}}" name="group1" type="radio" id="radio1">
+                                <label style="margin-bottom: 5px;">Weekly Rate ({{posttaskCt.budget.Weeklyrate}})</label>
+                            </label>
+                        </fieldset>
+                        <fieldset class="form-group radio-inline">
+                            <label for="radio1">
+                                <input required ng-model="posttaskCt.obj.budget" value="{{posttaskCt.budget.Monthlyrate}}" name="group1" type="radio" id="radio1">
+                                <label style="margin-bottom: 5px;">Monthly Rate ({{posttaskCt.budget.Monthlyrate}})</label>
+                            </label>
+                        </fieldset>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+            <div class="form-group margin-bottom20">
+                <div class="col-lg-12 row">
+                    <input type="submit" value="Post a Task" class="btn btn-blue margin-right15 margin-bottom15" required>
+                    <!--
+                    <input type="button" value="Get a Task Estimate" class="btn btn-info btn-lg margin-bottom15">
+                    //-->    
+            </div>
+            </div>
+           
+        </div>
+        <div id="partner-div" class="col-lg-6" style="display:none;">
+            <a  ng-href="{{posttaskCt.adUrl}}" target="_blank"><img ng-src="{{posttaskCt.imgPath}}" style="width:100%"></a>
+        </div>
+    </form>
+</section>
+<section id="taskSubmit" style="display: none">
+    <div class="alert alert-success">Thank you for using TaskLance, available Freelancer will contact you soon.</div>
+</section>

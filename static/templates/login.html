@@ -1,0 +1,87 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Task Providers | Client-Dashboard Login
+</title><link href="css/style1.css" rel="stylesheet" type="text/css" /><link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" /><link href="css/font-awesome.css" rel="stylesheet" type="text/css" /><link href="css/bootstrap-social.css" rel="stylesheet" type="text/css" /><link rel="icon" href="images/favicons.ico" type="image/x-icon" /><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <style type="text/css">
+        .checkb {
+            margin-left: 20px;
+        }
+
+        .fontc {
+            font-size: 12px;
+        }
+
+ 
+       
+    </style>
+ <section class="container">
+        <div class="col-lg-12">
+            <div class="container">
+                <div class="omb_login">
+                   
+                    <h2 class="omb_authTitle">Login Client Dashboard or <a ui-sref="register" ui-sref-active="active" href="/register">Sign up</a></h2>
+                    <div style="margin-bottom: 70px;" class="row omb_row-sm-offset-3 omb_socialButtons">
+                        
+                        <div class="col-xs-6 col-sm-3">
+                            <a ng-click="linkedInLogin()" class="btn btn-lg btn-block omb_btn-linkedin">
+                                <i class="fa fa-linkedin visible-xs"></i>
+                                <span class="hidden-xs">Login  with LinkedIn </span>
+                            </a>
+                        </div>
+                        <div class="col-xs-6 col-sm-3">
+                            <a ng-click="googleLogin()" class="btn btn-lg btn-block omb_btn-google">
+                                <i class="fa fa-google-plus visible-xs"></i>
+                                <span class="hidden-xs">Login with Google+ </span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" style="text-align: left; margin-top: 40px;font-weight:bold;">
+                <h2>Or Sign in with Email ID</h2>
+        </div>
+
+        <div class="col-md-4 col-sm-12 col-xs-12">
+                <div class="account-wall" style="background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)) center; ">
+                     <div class="form-signin">
+                        
+                        <input name="txt_username" id="txt_username" tabindex="1" type="text" placeholder="Enter Email-Id" class="form-control" />
+                        <input name="txt_password" id="txt_password" tabindex="2" type="password" placeholder="Password" class="form-control" />
+                        <div style="text-align: center">
+                            <span id="RegularExpressionValidator1" style="color:Red;display:none;"></span>
+                            <span id="rfv_username" class="Validators" style="color:Red;display:none;"></span>
+                            <span id="rfv_password" class="Validators" style="color:Red;display:none;"></span>
+                            <div id="vs_login" style="color:Red;display:none;">
+
+</div>
+                        </div>
+                        <a id="btn_login" tabindex="3" class="btn btn-lg btn-primary btn-block" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btn_login&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" style="text-align: center">Login to Client Dashboard</a>
+                        <span class="clearfix"></span>
+                        
+                    </div>
+                </div>
+                   <div class="row" style="text-align: center; margin-top: 10px;font-weight:bold;">
+                        <u><a ui-sref="taskerLogin" ui-sref-active="active"> Forgot Password</a></u>
+                    </div>
+                    <div class="row" style="text-align: center; margin-top: 10px;font-weight:bold;">
+                    <u><a ui-sref="register" ui-sref-active="active" href="/register">Create New Account</a></u>
+                        </div>
+    </section>   
+<link rel="icon" href="images/default-profile-pic2.png"></head>
+<body class="backgrd">
+    <form name="form1" method="post" action="./login.aspx" onsubmit="javascript:return WebForm_OnSubmit();" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'btn_login')" id="form1">
+<div>
+
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+
+
+
+<div class="sub-category" ng-if="catId != null ">
+        <div class="container alpha omega">
+          <div class="col-lg-12">
+                <ul>
+                    <li ng-repeat="category in categories"><a ng-href="/browse-task/{{::category.TaskCategoryID}}">{{::category.CategoryName}}</a></li>
+                </ul>
+                <div class="clear"></div>
+        </div>
+        </div>
+    </div>
+    
+    <div class="light-grey-bg padding-bottom20">
+      <div class="floating-nav">
+            <div class="container">
+                <div class="col-lg-12">
+                    <div class="sub-category-floating">
+                        <ul>
+                            <li><a ng-click="scrollTo('overview')" data-id="overview" class="active">Overview</a></li>
+                            <li><a ng-click="scrollTo('description')" data-id="description">Description</a></li>
+                            <li><a ng-click="scrollTo('compare-packages')" data-id="compare-packages">Task Rate</a></li>
+                           <!-- 
+                            <li><a ng-click="scrollTo('faqs')" data-id="faqs">FAQs</a></li>
+                            <li><a ng-click="scrollTo('reviews')" data-id="reviews">Reviews</a></li>
+                            -->
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">     
+            <div class="col-lg-8 section-ids"><!-- Left side code start here -->
+              <div id="overview" class="hidden-section"></div>
+              <div class="content-container margin-bottom20">
+                  <div class="content-space10">
+                      <div class="border-bottom padding-bottom15 margin-bottom15">
+                            
+                            <div class="leftfloat">
+                               
+                               <!-- <span class="text-grey">( 2891 )</span> -->
+                            </div>
+                            <div class="center"><a ui-sref="post-task({catId:catId,subCatId:subCatId})" target="_blank" class="btn btn-blue btn-blue-3x"> </i>Post a Task</a></div>
+                            <div class="clearfix"></div>
+                      </div>
+                    </div>
+                    <div id="slides_control">
+                        <div class="carousel">
+                            <carousel interval="myInterval">
+                                <slide ng-repeat="slide in slides">
+                                   
+                                     <img ng-src="{{slide.HostUrl + slide.ImagePath}}" title="{{slide.Description}}" alt="{{slide.Description}}"> 
+                                    <div class="carousel-caption">
+                                        <h4>{{slide.imageTitle}}</h4>
+                                        <p>{{slide.Description}}</p>
+                                    </div>
+                                </slide>
+                            </carousel>
+                        </div>
+                  </div>
+                </div>
+                
+                <div id="description" class="hidden-section"></div>
+                <div class="content-container margin-bottom20">
+                  <div class="content-space10">
+                      <div class="border-bottom margin-bottom15">
+                            <h2 class="text-blue font-light">About this task</h2>
+                            <div class="clearfix"></div>
+                      </div>
+                        <!-- <p>User interface testing, a testing technique used to identify the presence of defects is a product/software under test by using Graphical user interface.</p>
+                        <h4>GUI Testing - Approaches</h4>
+                        <ul>
+                          
+                            <li>Manual Based</li>
+                            <li>Capture and Replay</li>
+                            <li>Model-based testing</li>
+                        </ul> -->
+                        <p ng-bind-html="taskDesc"></p>
+                        <h4 class="margin-top25">Why us?</h4>
+                        <ul>
+                          <li>Only screened and online freelancers</li>
+                            <li>100% success rate</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center margin-top15">
+                        <a ui-sref="post-task({catId:catId,subCatId:subCatId})" target="_blank" class="btn btn-blue btn-blue-3x">Post a Task</a>
+                </div>
+ 
+               <!--  Task Rates --> 
+               <!-- <h3 class="heading-h2 margin-top20"> {{::subCatDetail.SubCategoryName}}  Task Rates</h3>
+                       <ng-src="{{ posttaskCt.budget.Dailyrate }}" >
+                       <div class="text-center margin-top15">
+                       <h4>{{rate.Dailyrate}}</h4>
+                </div> -->
+                               
+                       
+                
+                       
+                 <!-- Task Rates -->
+                 
+            <div class="text-center margin-top15">    
+            <div id="compare-packages" class="hidden-section"></div>
+            <div class="content-container margin-bottom20">
+              <div class="content-space10">
+                  <div class="border-bottom">
+                        <h2 class="text-blue font-light">Task Rates</h2>
+                        <div class="clearfix"></div>
+                  </div>
+                </div>
+            
+
+            <div class="table-responsive">
+                    <table  class="table ">
+                          <tr>
+                            <!-- <th rowspan="2">&nbsp;</th> -->
+                            <td> Day</td>
+                            <td> Week </td>
+                            <td> Month </td>
+                          </tr>
+                          <tr>
+                            <td>Rs. {{rate.Dailyrate}}</td>
+                            <td>Rs. {{rate.Weeklyrate}}</td>
+                            <td>Rs. {{rate.Monthlyrate}}</td>
+                          </tr>
+                          
+                        
+           </table>  
+            </div> 
+        </div>   
+            </div>   
+            
+       
+            <div class="text-center margin-top15">    
+            <!--
+                    <div id="compare-packages" class="hidden-section"></div>
+                    <div class="content-container margin-bottom20">
+                      <div class="content-space10">
+                          <div class="border-bottom">
+                                <h3 class="text-blue font-light"> Skill Development & Training </h3>
+                                <div class="clearfix"></div>
+                          </div>
+                        </div>
+                    </div>
+                -->
+                    <div>
+                            <div class = "col-lg-12 text left">
+                                <h2 class="heading-h2 margin-top20">Want to Become  {{::subCatDetail.SubCategoryName}}? </h2>
+                                <h2 class="heading-h2 margin-top20">Learn on Live Project in collaboration with Industry Proffesionals <h2>
+                            <div>
+                                <div class="slide-width">
+                                    <div class="slide-img-box">
+                                        <div class="onHover-data">
+                                            <div class="icon-indent margin-top40">
+                                                <span class="tl-sprite-new designation-icon"></span>
+                                                <span class="freelancer-title"> IT training For Big Data, Database & BI</span>
+                                            </div>
+                                            <div class="icon-indent">
+                                                <span class="tl-sprite-new experience-icon"></span>
+                                                <span class="freelancer-title">100% Job Assistance</span>
+                                            </div>
+                                        </div>
+                                        <img src="../images/training/pragstacktraning.png">
+                                    </div>
+                                    <h6>PragStack Edutech</h6>
+                                    <p> IT Training</p>
+                                    <div>
+                                        <span class="tl-sprite-new star-sm-filled"></span>
+                                        <span class="tl-sprite-new star-sm-filled"></span>
+                                        <span class="tl-sprite-new star-sm-filled"></span>
+                                        <span class="tl-sprite-new star-sm-filled"></span>
+                                        <span class="tl-sprite-new star-sm-half"></span>
+                                    </div>
+                                    <div class="text-center margin-top15">
+                                          <a href="http://www.profoundedutech.com/batch_schedule" target="_blank" class="btn btn-blue btn-blue-3x">Register </a>
+                                    </div>
+                    
+                                </div>
+                              </div>
+                              
+                </div>
+                </div>
+                   </div>
+
+            </div><!-- Left side code end here -->
+            <div class="col-lg-4"><!-- Right side code start here -->
+              <div class="content-container content-space10" ng-if="hideTasker">
+                  <h2>
+                      <span class="text-blue">
+                         <!--  <i class="glyphicon glyphicon-usd font18"></i>5 -->
+                         <span class="rating-star-box">
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-full"></span>
+                                <span class="star star-half"></span>
+                        </span>
+                        </span>
+                        Recommended
+                    </h2>
+                    <div class="margin-bottom15">
+                            <div ng-controller="carouselCtrl" id="slides_control">
+                                    <div class="carousel">
+                                        <carousel interval="myInterval">
+                                            <slide  active="slide.active">
+                                               <img err-src="/images/image-placeholder.jpg" ng-src="{{ taskerDetail.hosturl + taskerDetail.imageurl }}" >
+                                                
+                                                <div class="carousel-caption">
+                                                    <h4>{{taskerDetail.ProfileName}}</h4>
+                                                    <p> {{taskerDetail.ProfileDescription}}</p>
+                                                </div>
+                                            </slide>
+                                        </carousel>
+                                    </div>
+                              </div>
+                      <i class="glyphicon glyphicon-time"></i> Approx 1 Day Turn Around Time
+                        <p>Completed more than 10 tasks</p>
+                    </div>
+                    <div>
+                      <h5>Skills:</h5>
+                        <ul>
+                          <li ng-repeat="item in taskerData">{{item.SubCategoryName}}</li>
+                        </ul>
+                    </div>
+                    <div class="text-center margin-top15">
+                        {{browseCategoryCt.categoryId}}
+                      <a ui-sref="post-task({catId:catId,subCatId:subCatId})" target="_blank" class="btn btn-blue btn-blue-3x">Post a Task</a>
+                    </div>
+                    <div class="text-center margin-bottom15 margin-top15">
+                      <a ui-sref="other-taskers({taskSubCatId: TaskSubCategoryID})">Other Tasklancers</a>
+                    </div>
+        <div class="col-lg-12 text-center">
+            <h2 class="heading-h2 margin-top20">Related Blog</h2>
+        </div>
+          <div class="col-lg-4 col-sm-4">
+            <div class="text-center margin-bottom30">
+                <a href="http://tasklanceinsights.com/?p=12" target="_blank"><img src="images/blog-pic-01.jpg"  alt=""></a>
+                <p class="font12 margin-top15"><a href="http://tasklanceinsights.com/?p=12" target="_blank">QlikView Vs Qlik Sense</a></p>
+            </div>
+          </div>
+        </div>
+        <div>
+
+        </div><!-- Right side code end here -->
+        
+
+        </div>
+        
+    </div>

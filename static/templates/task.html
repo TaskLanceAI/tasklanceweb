@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content ="Shwetha Shetty">
+    <meta name="keywords" content="Task,Freelancers,Database">
+    <meta name="description" content="Our available Freelancers">
+
+    <title>Task | TaskLance</title>   
+    
+    
+    <!-- Font Awesome  -->
+    <script src="https://use.fontawesome.com/7b314feae6.js"></script>
+    
+    <!-- Jquey -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!--font awesome -->
+    <script src="https://use.fontawesome.com/7b314feae6.js"></script>
+    
+    <!--google font -->
+    
+    <!-- CSS file  -->
+    <link href="css/styletask.css" rel="stylesheet">
+    <script>
+    
+        $(document).ready(function() {
+    var count;
+    var interval;
+
+    $("#scroller").on('mouseover', function() {
+    var div = $('body');
+		
+    interval = setInterval(function(){
+        	//if count has no value then it becomes 1 else take that value
+    count = count || 2;
+    var pos = div.scrollTop();
+    div.scrollTop(pos + count);
+    }, 30);
+    }).click(function() {
+        if (count < 12) {
+             count = count+1;
+        }
+    }).on('mouseout', function() {
+        // Uncomment this line if you want to reset the speed on out
+         count = 0;
+        clearInterval(interval);
+    });
+	});
+
+        
+    
+    </script>
+    
+    
+    
+</head>
+    
+<body style="background-color : beige">
+  
+    <div class="container">
+	   <div class="row">
+           <h1 align="center">Available FreeLancers</h1>				
+       </div><!-- /row -->	
+        <div class="row">
+            <h3 align="center">Choose from our available freelancer for Restoring your database</h3>				
+        </div><!-- /row -->            
+    </div><!--/container -->
+		
+	<div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                 <div class="task task-new">
+                    <a href="#">
+                    <h3>Alex Mahone(2 Mins)</h3>
+                    <span class="task-tags">
+                        <em>I can help you with any type of database issue </em>
+                    </span>
+                    <span class="task-picture">
+                        <img src="img/pic2.jpg" width="230" height= "200" style= "padding-bottom : 2px; ">
+                    </span>
+                    </a>
+                    <div class="detail-preview">
+                        <div class="detail-content">
+                            I have handled SQL Server,Oracle Database,Sybase,Informix and MySql.
+                        </div><!-detail-vontent -->
+            
+                     </div><!--detail-preview -->
+        
+                     <div class="detail-rating">
+                    
+                        <i class="fa fa-star custom" aria-hidden="true"></i>
+                         <i class="fa fa-star custom" aria-hidden="true"></i>
+                        <i class="fa fa-star custom" aria-hidden="true"></i>
+                         <i class="fa fa-star custom" aria-hidden="true"></i>
+                  
+                     </div>
+                </div><!--package-new -->
+                
+            </div><!--col ends here -->
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="task task-new">
+                    <a href="#">
+                        <h3>Mike Ross (10 Mins) </h3>                 
+                        <span class="task-tags">
+                            <em>I will manual restore, backup MySql within 5 hours</em>
+                        </span>
+                        <span class="task-picture">
+                            <img src="img/pic1.jpg"width="230" height= "200"  style= "padding-bottom : 2px;">
+                        </span>
+                    </a>
+                    <div class="detail-preview">
+                        I have handled MySql database of all types for big to small firm.I can provide the quickest restoration of MySql Server.
+                    </div> <!--detail-preview -->
+                    <div class="detail-rating">
+                        <i class="fa fa-star custom" aria-hidden="true"></i>
+                        <i class="fa fa-star custom" aria-hidden="true"></i>
+                        <i class="fa fa-star custom" aria-hidden="true"></i>
+                        <i class="fa fa-star-half custom" aria-hidden="true"></i>
+              
+                    </div> <!-- detail-rating -->
+                </div><!--package-new -->
+                
+            </div><!--col ends here -->
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="task task-new">
+                    <a href="#">
+                    <h3>Linc Bul( 1 Hour)</h3>
+                        <span class="task-tags">
+                            <em>I will provide you highest service in cheapest price</em>
+                        </span>
+                        <span class="task-picture">
+                            <img src="img/pic3.jpg" width="230" height= "200" style= "padding-bottom :2px;">
+                        </span>
+                    </a>
+                    <div class="detail-preview">
+                        Want to outsource your Db but low on Budget?? No problem I can provide you Database Service in lowest possible cost.
+                    </div >
+                    <div class="detail-rating">
+                        <i class="fa fa-star custom" aria-hidden="true"></i>
+                        <i class="fa fa-star custom" aria-hidden="true"></i>
+                        <i class="fa fa-star custom" aria-hidden="true"></i>              
+                    </div> <!--detail-rating -->
+                </div><!--package-new -->
+            </div> <!--col ends here -->
+
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="task task-new">
+                    <a href="#">
+                    <h3>Sara Tanc(40 Mins)</h3>
+                        <span class="task-tags">
+                            <em>I can provide most reliable service related to database</em>
+                        </span>
+                        <span class="task-picture">
+                            <img src="img/pic4.jpg" width="230" height= "200" style= "padding-bottom : 2px;">
+                        </span>
+                    </a>
+                    <div class="detail-preview">
+                        Hi I am Sara, I am a former employee of Deloitte Consulatancy Service. I have 10+ years of experience in Database. You can rely on me for any kind of database activity.
+                    </div>
+                    <div class="detail-rating">
+                        <i class="fa fa-star custom" aria-hidde="true"></i>
+                        <i class="fa fa-star custom" aria-hidden="true"></i>
+                        <i class="fa fa-star custom" aria-hidden="true"></i>
+                        <i class="fa fa-star-half custom" aria-hidden="true"></i>
+              
+                    </div> <!--detail-rating -->
+                </div><!--package-new -->
+                
+            </div> <!--col ends here -->
+				
+        </div><!-- /row -->
+	
+        <div class="row">
+			
+        </div><!-- /row -->
+            
+    </div><!--/container -->
+      
+
+    <div class="container">
+        <div class="row">
+            <h1 align="center">Other related task</h1>
+        </div><!-- /row -->
+	
+        <div class="row">
+            <h3 align="center">Other similar task you might need help with </h3>
+        </div><!-- /row -->
+    </div><!--/container -->
+      
+      
+	<div class="container">
+        <div class="row">
+            <div class ="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+	           <div class="package package-new">
+                   <a href="#">
+                       <h3>Database Restoration</h3>
+                       <span class="tags">
+                           <em>We can help you with your database restoration</em>
+                       </span>
+                        <span class="package-picture">
+                            <img src="img/database_restore.jpg" width="290" height= "228" style= "padding-bottom : 5px;">
+                       </span>
+                   </a>
+                    <ul class="gigs-preview">
+                        <li><a href="#"><img src="img/port01.jpg" width="80" height="65"></img></a> </li>
+                        <li><a href="#"><img src="img/port05.jpg" width="80" height="65"></img></a> </li>
+                        <li><a href="#"><img src="img/port03.jpg" width="80" height="65"></img></a> </li>
+                        <li class="count" style="background-image : url();"><a href="#" style="text-decoration : none;"><em>+6</em>
+                                    Gigs
+                                                                            </a></li>
+                    </ul>
+        
+                </div><!--package-new -->
+            </div><!--col end -->
+
+
+            <div class ="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+	           <div class="package package-new">
+                   <a href="#">
+                        <h3>Database Backup</h3>
+                            <span class="tags">
+                                <em>For all kind of database backup</em>
+                            </span>
+                            <span class="package-picture">
+                                <img src="img/database_backup.jpg" width="290" height= "228" style= "padding-bottom : 5px;">
+                            </span>
+                    </a>
+                    <ul class="gigs-preview">
+                        <li><a href="#"><img src="img/port04.jpg" width="80" height="65"></img></a> </li>
+                        <li><a href="#"><img src="img/port02.jpg" width="80" height="65"></img></a> </li>
+                        <li><a href="#"><img src="img/port06.jpg" width="80" height="65"></img></a> </li>
+                        <li class="count" style="background-image : url();"><a href="#" style="text-decoration : none;"><em>+7</em>
+                                    Gigs
+                                </a></li>
+                    </ul>
+        
+                </div><!--package-new -->
+            </div><!--col end -->
+
+
+            <div class ="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+	           <div class="package package-new">
+                   <a href="#">
+                       <h3>Database Migration</h3>
+                            <span class="tags">
+                                <em>Planning for Database Migration? Let us help you.</em>
+                            </span>
+                       <span class="package-picture">
+                            <img src="img/databasemigration.jpg" width="290" height= "228" style= "padding-bottom : 5px;">
+                       </span>
+                   </a>
+                   <ul class="gigs-preview">
+                       <li><a href="#"><img src="img/port01.jpg" width="80" height="65"></img></a> </li>
+                       <li><a href="#"><img src="img/port06.jpg" width="80" height="65"></img></a> </li>
+                        <li><a href="#"><img src="img/port03.jpg" width="80" height="65"></img></a> </li>
+                        <li class="count" style="background-image : url();"><a href="#" style="text-decoration : none;"><em>+2</em>
+                                    Gigs
+                                </a></li>
+                    </ul>
+        
+                </div><!--package-new -->
+            </div><!--col end --> 
+
+        </div><!--row -->
+      </div><!--container -->
+      <div id="scroller"></div>
+	
+    
+    
+    
+</body>
+</html>
+    

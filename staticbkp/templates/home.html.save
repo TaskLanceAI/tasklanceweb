@@ -1,0 +1,96 @@
+<section class="hp-banner-container"> <!-- hp banner code starts here -->
+
+<meta name="description" content="The #1 marketplace for IT Infrastructure issues, including Database backup & recovery, AWS cloud server issues and Database migration. Start Posting your most urgent IT related tasks now with 100% Money-Back Guarantee!" />
+<meta name="keywords" content="sql server,database, performance, AWS cloud" />
+<meta property="fb:app_id" content="51230776953" />
+
+<meta property="og:title" content="Database backup, Restore, Performance issues, Migration, AWS Cloud &amp; More. | TaskLance" />
+<meta property="og:description" content=""The #1 marketplace for IT Infrastructure issues, including Database backup & recovery, AWS cloud server issues and Database migration. Start Posting your most urgent IT related tasks now with 100% Money-Back Guarantee!" />
+<meta property="og:url" content="https://tasklance.com/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="tasklance" />
+
+
+
+    <div class="hp-banner"></div>
+    <div class="container">
+        <div class="col-lg-12">
+            <div class="welcome-text">
+                <h1e</h1>
+                <p>
+                    TaskLance is an exclusive network of immediately 
+                    available freelancers in the world. <br>
+                    Top companies rely on TaskLancers for their 
+                    most urgent tasks.
+                </p>
+                <div><a ui-sref="post-task" class="btn btn-default">Post a Task</a></div>
+                <p class="or-text">OR</p>
+                <div><a ui-sref="#" class="btn btn-default">Become a TaskLancer</a></div>
+                <p class="text-small">Earn $1,000 per week completing tasks,  <br>join TaskLance and start earning today.</p>
+            </div>
+        </div>
+    </div>    	
+</section> <!-- hp banner code ends here -->
+<section class="whats-is-tasklancer"> <!-- whats-is-tasklancer code starts here -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>What is TaskLancer?</h2>
+                <p>
+                    Third generation online market place for freelancers and <br>
+                    business to outsource urgent tasks, find on demand workforce in minutes <br>
+                    online on via mobile.
+                </p>
+            </div>
+            <div class="col-lg-4 col-sm-4 text-center margin-bottom25">
+                <div class="step-1"><i class="glyphicon glyphicon-edit"></i></div>
+                <p>Tell us what is <br>urgent task.</p>
+            </div>
+            <div class="col-lg-4 col-sm-4 text-center margin-bottom25">
+                <div class="step-2">
+                    <i class="glyphicon glyphicon-ok"></i>
+                    <i class="glyphicon glyphicon-list-alt"></i>
+                </div>
+                <p>TaskLancer recieve <br>task and start immediately <br>working on it.</p>
+            </div>
+            <div class="col-lg-4 col-sm-4 text-center margin-bottom25">
+                <div class="step-3"><i class="glyphicon glyphicon-thumbs-up"></i></div>
+                <p>Once task is completed <br>make payment.</p>	
+            </div>
+        </div>
+    </div>    	
+</section><!-- whats-is-tasklancer code ends here -->
+<section class="recently-completed-tasks margin-top25"><!-- Recently Completed Tasks code starts here -->
+    <div class="container">
+        <div class="col-lg-12 text-center">
+            <h2 class="heading-h2">Recently Completed Tasks</h2>
+        </div>
+        <div class="col-lg-4 col-sm-4">
+            <div class="profile-pic-box">
+                <span class="tl-sprite profile-pic"></span>
+            </div>
+            <div class="task-container">
+                <h4 class="task-title">Database Recovery</h4>
+                <p class="task-desc">Restoration of  the damaged files from RMAN backups and recovering all database changes.</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-4">
+            <div class="profile-pic-box">
+                <span class="tl-sprite profile-pic"></span>
+            </div>
+            <div class="task-container">
+                <h4 class="task-title">Database Backup</h4>
+                <p class="task-desc">Create Database Backup job to backup the database, its files and filegroups.</p>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-4">
+            <div class="profile-pic-box">
+                <span class="tl-sprite profile-pic"></span>
+            </div>
+            <div class="task-container">
+                <h4 class="task-title">Database Migration</h4>
+                <p class="task-desc">MSSQL database migration from  an on-premises database to the MySQL database on AWS cloud.</p>
+            </div>
+        </div>
+    </div>
+</section><!-- Recently Completed Tasks code ends here -->

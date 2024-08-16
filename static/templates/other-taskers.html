@@ -1,0 +1,26 @@
+<div style="padding:2%">
+    <table class="table table-striped" ng-if="browseTaskerCt.getTaskersList.length > 0">
+        <thead>
+            <tr>
+                <th>Category Name</th>
+                <th>Profile Name</th>
+                <th>Sub Category Name</th>
+                <!-- <td>Education</td>
+            <td>Date_of_Birth</td> -->
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="tasker in browseTaskerCt.getTaskersList">
+                <td>{{::tasker.categoryname}}</td>
+                <td>{{::tasker.profilename}}</td>
+                <td>{{::tasker.subcategoryname}}</td>
+                <!-- <td>{{::tasker.Education}}</td>
+            <td>{{::tasker.date_of_birth}}</td> -->
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="font-weight:bold;font-size:22px" ng-if="browseTaskerCt.getTaskersList.length == 0">
+        No Tasker Available
+    </div>
+</div>
