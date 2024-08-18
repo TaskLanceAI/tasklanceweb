@@ -1,27 +1,27 @@
 module.exports = {
     connectionString: {
-        host:'13.127.199.39',
+        host:'hostip',
         user: 'root',
-        password: 'root',
+        password: 'password',
         database: 'tlance',
         port: '3306',
         connectionLimit: 1000
     },
-    sendgridApiKey: "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",
-    errorMail: "sadhana.upadhyay3@gmail.com",
+    sendgridApiKey: "SG.key",
+    errorMail: "email",
     version: "12345",
-    TOKEN_SECRET: "234655gdfysgdsadfys",
+    TOKEN_SECRET: "secret",
     TOKEN_EXP: "10h",
-    emailFrom: 'avishkar@tasklance.com',
+    emailFrom: 'email',
     bucketName: "tasklance",
     s3Config: {
-        accessKeyId: 'AKIAILUSJF6CZ5LNELGA',
-        secretAccessKey: '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',
+        accessKeyId: 'id',
+        secretAccessKey: 'key',
         apiVersion: '2006-03-01',
         signatureVersion: 'v4'
     },
-    hostUrl:'http://tasklance.com',
+    hostUrl:'http://tasklanceui.com',
     isTaskerNotified:false,
-    taskerMailSendTo:'avishkar@tasklance.com',
+    taskerMailSendTo:'email',
     isDevelopment:true
 }
