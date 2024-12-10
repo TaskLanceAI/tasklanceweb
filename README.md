@@ -1,6 +1,6 @@
 TaskLance is an AI/ML-powered recommendation platform designed to connect professionals with opportunities in a meaningful way. It enables a seamless "peer-to-peer work" model, empowering professionals to deliver projects while discovering the best opportunities tailored to their expertise.
 
-#Dependencies
+# Dependencies
 
 This platform uses on the following technologies:
 
@@ -18,15 +18,17 @@ Amazon S3: Cloud storage
 
 SendGrid: Email delivery service
 
-#Deployment Instructions
+# Deployment Instructions
 
 Step 1: Start the Application
 Navigate to the root directory of the project:
 
 cd /tasklance/
+
 pm2 restart app.js
 
 Step 2: Restart NGINX Service
+
 Restart the NGINX service using the following command:
 
 sudo service nginx restart
