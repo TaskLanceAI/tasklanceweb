@@ -5,11 +5,17 @@ TaskLance is an AI/ML-powered recommendation platform designed to connect profes
 This platform uses on the following technologies:
 
 Node.js: Backend JavaScript runtime
+
 MySQL: Data storage and retrieval
+
 NPM: Package management
+
 Angular: Frontend framework
+
 Express.js: Web application framework
+
 Amazon S3: Cloud storage
+
 SendGrid: Email delivery service
 
 #Deployment Instructions
